@@ -2,6 +2,10 @@
 using namespace std;
 using std::string;
 
+class AbstractCar{
+    virtual void AskForPromation()=0;
+};
+
 class Car{
 
 private:
@@ -39,18 +43,23 @@ public:
         Color = color;
         Year = year;
     }
+    
+    void AskForPromation(){
+        if (Year > 2020)
+            cout<< "ok good car"<< endl;
+        else
+            cout<< "not good car"<< endl;
+    }
 };
+    
 
 int main() 
 {
     // object 1
     Car car = Car("BYD","Dark",2020);
-    //car.print();
-
     Car car1 = Car("Malibu","Blue",2024);
-    //car1.print();
 
-    car.setYear(2021);
-    cout << car.getName() << " is " << car.getYear() << " year ca "<< endl;
-
+    car.AskForPromation();
+    car1.AskForPromation();
+    
 }
