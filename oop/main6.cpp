@@ -53,7 +53,7 @@ public:
             cout<< "not good car"<< endl;
     }
     void Work() {
-        cout << Name << "task send email a message..." << endl;
+        cout << Name << " task send email a message..." << endl;
     }
 };
 
@@ -68,6 +68,9 @@ public:
 
     void FixBug() {
         cout << Name << " fix bug using " << FavProgramingLanguage << endl;
+    }
+    void Work() {
+        cout << Name << " is writting " << FavProgramingLanguage <<" code" << endl;
     }
 };
 class Person:public Car{
@@ -91,9 +94,9 @@ int main()
     // auto1.FixBug();
     // auto2.FixBug();
     // auto1.AskForPromation();
-
+    Auto auto1 = Auto("Tesla","Dark",2024,"Rust");
     Person person = Person("Ali","blue",2000,"Id cart");
-    person.GetData();
-    person.AskForPromation();
+    person.Work();
+    auto1.Work();
     
 }
