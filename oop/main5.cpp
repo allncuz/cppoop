@@ -9,9 +9,11 @@ class AbstractCar{
 class Car:AbstractCar{
 
 private:
-    string Name;
+    
     string Color;
     int Year;
+protected:
+    string Name;
 public:
     void setName(string name) { // setter
         Name = name;
@@ -52,7 +54,7 @@ public:
     }
 };
 
-class Auto: Car {
+class Auto:public Car {
 public:
     string FavProgramingLanguage;
     Auto(string name,string color,int year,string favPrograminglanguage)
@@ -62,7 +64,7 @@ public:
     }
 
     void FixBug() {
-        cout << getName() << " fix bug using " << FavProgramingLanguage << endl;
+        cout << Name << " fix bug using " << FavProgramingLanguage << endl;
     }
 };
     
@@ -74,5 +76,7 @@ int main()
     Auto auto2 = Auto("BYD","Blue",2024,"C++");
     auto1.FixBug();
     auto2.FixBug();
+    auto1.AskForPromation();
+
     
 }
