@@ -52,7 +52,8 @@ public:
         else
             cout<< "not good car"<< endl;
     }
-    void Work() {
+    // virtual bu yashirincha qilib beradi
+    virtual void Work() {
         cout << Name << " task send email a message..." << endl;
     }
 };
@@ -94,9 +95,18 @@ int main()
     // auto1.FixBug();
     // auto2.FixBug();
     // auto1.AskForPromation();
+
     Auto auto1 = Auto("Tesla","Dark",2024,"Rust");
     Person person = Person("Ali","blue",2000,"Id cart");
-    person.Work();
-    auto1.Work();
+    // person.Work();
+    // auto1.Work();
+
+    // pointers
+    Car* c1 = &auto1;
+    Car* c2 = &person;
+
+    c1 -> Work();
+    c2 -> Work();
+
     
 }
