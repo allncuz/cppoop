@@ -1,2 +1,2 @@
-g++ main5.cpp -o main
+g++ main6.cpp -o main
 ./main
