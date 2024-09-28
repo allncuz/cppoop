@@ -6,7 +6,7 @@ class AbstractCar{
     virtual void AskForPromation()=0;
 };
 
-class Car{
+class Car:AbstractCar{
 
 private:
     string Name;
