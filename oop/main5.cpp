@@ -67,16 +67,30 @@ public:
         cout << Name << " fix bug using " << FavProgramingLanguage << endl;
     }
 };
-    
+class Person:public Car{
+public:
+    string Subject;
+    void GetData() {
+        cout << Name << " is data " << Subject << " subject" << endl;
+    }
+    Person(string name,string color,int year,string subject)
+        :Car(name,color,year)
+        {
+            Subject = subject;
+        }
+};
 
 int main() 
 {
     // object 1
-    Auto auto1 = Auto("Tesla","Dark",2024,"Rust");
-    Auto auto2 = Auto("BYD","Blue",2024,"C++");
-    auto1.FixBug();
-    auto2.FixBug();
-    auto1.AskForPromation();
+    // Auto auto1 = Auto("Tesla","Dark",2024,"Rust");
+    // Auto auto2 = Auto("BYD","Blue",2024,"C++");
+    // auto1.FixBug();
+    // auto2.FixBug();
+    // auto1.AskForPromation();
 
+    Person person = Person("Ali","blue",2000,"Id cart");
+    person.GetData();
+    person.AskForPromation();
     
 }
